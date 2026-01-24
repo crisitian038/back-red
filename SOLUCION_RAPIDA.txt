@@ -1,0 +1,41 @@
+🚀 SOLUCIÓN RÁPIDA - ERROR 500 EN CREACIÓN DE USUARIOS
+
+❌ PROBLEMA QUE OCURRIÓ:
+- Error: "Table 'red_educativa.inscripciones' doesn't exist"
+- Causa: Spring Boot intentaba insertar datos ANTES de que Hibernate creara las tablas
+
+✅ SOLUCIÓN APLICADA:
+- Creado: DataInitializer.java (componente que se ejecuta DESPUÉS de crear tablas)
+- Modificado: application.yml (ddl-auto: create-drop, sql.init.mode: never)
+- Removido: Carga automática de data.sql
+
+📋 PASOS PARA CORREGIR:
+
+1. LIMPIA LA BASE DE DATOS:
+   Ejecuta en MySQL:
+   ```sql
+   DROP DATABASE IF EXISTS red_educativa;
+   CREATE DATABASE red_educativa;
+   ```
+
+2. REINICIA EL SERVIDOR:
+   - Si usas IDE: Solo reinicia
+   - Si usas terminal: mvn spring-boot:run
+
+3. VERIFICA LOS LOGS:
+   Deberías ver:
+   ✅ 2 usuarios insertados
+   ✅ 2 carreras insertadas
+   ✅ 2 contactos insertados
+   ✅ 2 inscripciones insertadas
+
+4. PRUEBA:
+   - Accede con: admin@admin.com / admin123
+   - Intenta crear un nuevo usuario
+   - NO DEBE dar error 500 ✨
+
+📝 USUARIOS DE PRUEBA:
+- admin@admin.com / admin123 (ADMIN)
+- usuario@prueba.com / user123 (USER)
+
+✨ ¡LISTO! El error debe estar resuelto.

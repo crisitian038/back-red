@@ -1,0 +1,46 @@
+🔧 CORRECCIÓN - ERROR 403 AL LOGIN
+
+❌ QUÉ PASÓ:
+- Cambié ddl-auto a "create-drop" lo que BORRA la BD cada vez que reinicia
+- Eso eliminó tu usuario admin anterior
+- Las contraseñas en DataInitializer eran diferentes
+
+✅ SOLUCIÓN APLICADA:
+- Cambié ddl-auto a "update" (NO borra datos, solo actualiza esquema)
+- Actualicé DataInitializer con contraseñas consistentes
+- Ahora usa "123456" para ambos usuarios
+
+🚀 PASOS PARA ARREGLARLO:
+
+1. REINICIA EL SERVIDOR SPRING BOOT
+   - Si usas IDE: Just restart
+   - Si usas terminal: Ctrl+C y mvn spring-boot:run
+
+2. VERIFICA EN LOS LOGS:
+   ✅ Debería mostrar:
+   "✅ Los datos ya existen, omitiendo inicialización"
+   O si es primera vez:
+   "📝 Insertando usuarios..."
+   "✅ 2 usuarios insertados"
+
+3. INTENTA LOGIN CON:
+   Email: admin@admin.com
+   Password: 123456
+   
+   O:
+   Email: usuario@prueba.com  
+   Password: 123456
+
+4. ¿SIGUE SIN FUNCIONAR?
+   Si tu usuario anterior tenía otra contraseña, ejecuta esto en MySQL:
+   ```sql
+   DROP DATABASE IF EXISTS red_educativa;
+   CREATE DATABASE red_educativa;
+   ```
+   Luego reinicia el servidor (se crearán tablas y datos de prueba)
+
+✨ CREDENCIALES ACTUALES:
+- admin@admin.com / 123456 (ADMIN)
+- usuario@prueba.com / 123456 (USER)
+
+¡DEBE FUNCIONAR AHORA!
