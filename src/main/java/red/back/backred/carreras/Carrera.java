@@ -23,6 +23,7 @@ public class Carrera {
 
     private String modalidad; // Ej: Abierto, En línea
 
+    @Column(nullable = false)
     private boolean activa;
 
     private int solicitudes; // popularidad

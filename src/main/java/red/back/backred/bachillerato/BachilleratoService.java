@@ -14,9 +14,22 @@ public class BachilleratoService {
     private final BachilleratoRepository repo;
 
     public Bachillerato crear(Bachillerato bachillerato) {
+        System.out.println("🆕 CREANDO INSCRIPCIÓN BACHILLERATO (PÚBLICO):");
+        System.out.println("   Nombre: " + bachillerato.getNombreCompleto());
+        System.out.println("   Email: " + bachillerato.getEmail());
+        System.out.println("   Teléfono: " + bachillerato.getTelefono());
+        System.out.println("   CURP: " + bachillerato.getCurp());
+        System.out.println("   Fecha Nacimiento: " + bachillerato.getFechaNacimiento());
+
+
+        // Establecer valores automáticos
         bachillerato.setFechaRegistro(LocalDateTime.now());
         bachillerato.setEstado(EstadoBachillerato.EN_PROCESO);
-        return repo.save(bachillerato);
+
+        // Guardar en BD
+        Bachillerato guardado = repo.save(bachillerato);
+        System.out.println("✅ INSCRIPCIÓN GUARDADA ID: " + guardado.getId());
+        return guardado;
     }
 
     public Page<Bachillerato> listar(Pageable pageable) {
@@ -45,7 +58,9 @@ public class BachilleratoService {
                 .orElseThrow(() ->
                         new RuntimeException("Registro no encontrado"));
 
+        System.out.println("🔄 CAMBIANDO ESTADO BACHILLERATO ID " + id + " a: " + estado);
         bachillerato.setEstado(estado);
         return repo.save(bachillerato);
     }
+
 }

@@ -2,8 +2,6 @@ package red.back.backred.carreras;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import red.back.backred.carreras.Carrera;
-import red.back.backred.carreras.CarreraRepository;
 
 import java.util.List;
 
@@ -21,6 +19,8 @@ public class CarreraService {
         carrera.setId(null);
         carrera.setActiva(true);
         carrera.setSolicitudes(0);
+        System.out.println("🆕 Creando carrera: " + carrera.getNombre() +
+                " | activa: " + carrera.isActiva());
         return repo.save(carrera);
     }
 
@@ -32,11 +32,18 @@ public class CarreraService {
         Carrera c = repo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Carrera no encontrada"));
 
+        System.out.println("🔄 Actualizando carrera ID: " + id);
+        System.out.println("📊 Datos recibidos: activa=" + data.isActiva() +
+                ", nombre=" + data.getNombre());
+
         c.setNombre(data.getNombre());
         c.setDescripcion(data.getDescripcion());
         c.setModalidad(data.getModalidad());
+        c.setActiva(data.isActiva()); // ← ¡ESTA LÍNEA ES LA CLAVE!
 
-        return repo.save(c);
+        Carrera guardada = repo.save(c);
+        System.out.println("✅ Carrera actualizada: activa=" + guardada.isActiva());
+        return guardada;
     }
 
     public void cambiarEstado(Long id, boolean activa) {
@@ -45,6 +52,7 @@ public class CarreraService {
 
         c.setActiva(activa);
         repo.save(c);
+        System.out.println("✅ Estado cambiado ID " + id + " a: " + activa);
     }
 
     public void eliminar(Long id) {

@@ -1,4 +1,4 @@
-package red.back.backred.inscripciones;
+    package red.back.backred.inscripciones;
 
 public enum EstadoInscripcion {
     EN_PROCESO,

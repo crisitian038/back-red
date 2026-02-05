@@ -13,6 +13,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
@@ -22,10 +27,29 @@ public class SecurityConfig {
     private final JwtFilter jwtFilter;
 
     @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList(
+                "http://localhost:5173",
+                "http://localhost:5174"
+        ));
+        configuration.setAllowedMethods(Arrays.asList(
+                "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"
+        ));
+        configuration.setAllowedHeaders(Arrays.asList("*"));
+        configuration.setAllowCredentials(true);
+        configuration.setMaxAge(3600L); // 1 hora de cache para preflight
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
+
+    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(csrf -> csrf.disable())
-                .cors(cors -> {}) // Configuración de CORS para conectar con React
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .sessionManagement(sm ->
                         sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
@@ -39,15 +63,21 @@ public class SecurityConfig {
 
                         .requestMatchers(HttpMethod.GET, "/api/bachillerato").permitAll()
 
-
                         // 📰 Noticias públicas
                         .requestMatchers(HttpMethod.GET, "/api/noticias/publicadas").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/noticias/{id}").permitAll()
 
                         // Formularios públicos
                         .requestMatchers(HttpMethod.POST, "/inscripciones").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/bachillerato").permitAll()
                         .requestMatchers(HttpMethod.POST, "/contactos").permitAll()
+
+                        // Usuario común
+                        .requestMatchers(HttpMethod.POST, "/api/bachillerato").permitAll()
+
+                        // Admin
+                        .requestMatchers(HttpMethod.GET, "/api/bachillerato/**").authenticated()
+                        .requestMatchers(HttpMethod.PATCH, "/api/bachillerato/**").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/api/bachillerato/**").authenticated()
 
                         // ===============================
                         // 🔐 PROTEGIDOS (ADMIN)
