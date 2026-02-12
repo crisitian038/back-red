@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/api/noticias")
 @RequiredArgsConstructor
@@ -13,8 +12,13 @@ public class NoticiaController {
 
     private final NoticiaService noticiaService;
 
-    // 🔐 ADMIN
+    // ================== NORMAL (URL) ==================
+    @PostMapping
+    public Noticia crear(@RequestBody Noticia noticia) {
+        return noticiaService.guardar(noticia);
+    }
 
+    // ================== RESTO ==================
     @GetMapping
     public List<Noticia> listarTodas() {
         return noticiaService.obtenerTodas();
@@ -23,11 +27,6 @@ public class NoticiaController {
     @GetMapping("/{id}")
     public Noticia obtenerPorId(@PathVariable Long id) {
         return noticiaService.obtenerPorId(id);
-    }
-
-    @PostMapping
-    public Noticia crear(@RequestBody Noticia noticia) {
-        return noticiaService.guardar(noticia);
     }
 
     @PutMapping("/{id}")
@@ -40,8 +39,6 @@ public class NoticiaController {
     public void eliminar(@PathVariable Long id) {
         noticiaService.eliminar(id);
     }
-
-    // 🌐 PUBLICO
 
     @GetMapping("/publicadas")
     public List<Noticia> listarPublicadas() {
