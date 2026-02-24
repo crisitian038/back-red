@@ -1,4 +1,4 @@
-package red.back.backred.bachillerato;
+package red.back.backred.ingles;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "bachillerato")
-public class Bachillerato {
+@Table(name = "ingles_inscripciones")
+public class InglesInscripcion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,18 +31,12 @@ public class Bachillerato {
 
     private LocalDate fechaNacimiento;
 
+    private String nivelIngles; // A1, A2, B1, B2, C1, C2
+
     @Column(nullable = false)
     private LocalDateTime fechaRegistro;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private EstadoBachillerato estado;
-
-    // Tipo para diferenciar Bachillerato (por ejemplo: "2años", "286")
-    private String tipo;
-
-    // ⚠️ ¡ELIMINAR ESTA RELACIÓN COMPLETAMENTE!
-    // @ManyToOne
-    // @JoinColumn(name = "usuario_id") // ← QUITAR
-    // private Usuario usuario; // ← QUITAR
+    private EstadoInscripcionIngl estado;
 }

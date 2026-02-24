@@ -17,7 +17,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import java.util.Arrays;
+import java.util.Arrays; 
 
 @Configuration
 @EnableWebSecurity
@@ -54,43 +54,104 @@ public class SecurityConfig {
                         sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
                 .authorizeHttpRequests(auth -> auth
-                        // Públicos: Autenticación y OPTIONS (preflight de CORS)
+                        // ========================================
+                        // 🟢 PÚBLICOS - SIN AUTENTICACIÓN
+                        // ========================================
                         .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers("/uploads/**").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-
-                        // Carreras (lectura)
+                        
+                        // Carreras - lectura pública
+                        .requestMatchers(HttpMethod.GET, "/carreras").permitAll()
                         .requestMatchers(HttpMethod.GET, "/carreras/**").permitAll()
 
-                        .requestMatchers(HttpMethod.GET, "/api/bachillerato").permitAll()
-
-                        // 📰 Noticias públicas
+                        // Carreras ejecutivas - lectura pública
+                        .requestMatchers(HttpMethod.GET, "/carreras-ejecutivas").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/carreras-ejecutivas/**").permitAll()
+                        
+                        // Noticias - lectura pública de publicadas, GET por ID público, escritura protegida
                         .requestMatchers(HttpMethod.GET, "/api/noticias/publicadas").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/noticias/{id}").permitAll()
-
-                        // Formularios públicos
+                        .requestMatchers(HttpMethod.GET, "/api/noticias").authenticated() // Solo admins
+                        .requestMatchers(HttpMethod.POST, "/api/noticias").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/api/noticias/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/api/noticias/**").authenticated()
+                        
+                        // Inscripciones - creación pública, gestión protegida
                         .requestMatchers(HttpMethod.POST, "/inscripciones").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/contactos").permitAll()
+                        
+                        // Nuevas Inscripciones por programa - creación pública, lectura/gestión protegida
+                        .requestMatchers(HttpMethod.POST, "/ingles-inscripciones").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/ingles-inscripciones").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/ingles-inscripciones/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/ingles-inscripciones/**").authenticated()
 
-                        // Usuario común
+
+                        .requestMatchers(HttpMethod.GET, "/carreras-ejecutivas-inscripciones").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/carreras-ejecutivas-inscripciones").authenticated()
+
+
+                        .requestMatchers(HttpMethod.POST, "/bachillerato-286-inscripciones").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/bachillerato-286-inscripciones").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/bachillerato-286-inscripciones/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/bachillerato-286-inscripciones/**").authenticated()
+                        
+                        .requestMatchers(HttpMethod.POST, "/carreras-ejecutivas-inscripciones").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/carreras-ejecutivas-inscripciones").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/carreras-ejecutivas-inscripciones/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/carreras-ejecutivas-inscripciones/**").authenticated()
+                        
+                        // Contactos - creación pública, gestión protegida
+                        .requestMatchers(HttpMethod.POST, "/contactos").permitAll()
+                        
+                        // Bachilleratos - GET públicos (todos y con parámetros)
+                        .requestMatchers(HttpMethod.GET, "/api/bachillerato").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/bachillerato/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/bachillerato").permitAll()
 
-                        // Admin
-                        .requestMatchers(HttpMethod.GET, "/api/bachillerato/**").authenticated()
-                        .requestMatchers(HttpMethod.PATCH, "/api/bachillerato/**").authenticated()
+                        // ========================================
+                        // 🔐 PROTEGIDOS - REQUIEREN AUTENTICACIÓN
+                        // ========================================
+
+                        // Usuarios - todo requiere autenticación
+                        .requestMatchers(HttpMethod.GET, "/usuarios").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/usuarios/**").authenticated()
+                        .requestMatchers(HttpMethod.POST, "/usuarios").authenticated()
+                        .requestMatchers(HttpMethod.POST, "/usuarios/**").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/usuarios").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/usuarios/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/usuarios").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/usuarios/**").authenticated()
+
+                        // Inscripciones - lectura y edición protegida
+                        .requestMatchers(HttpMethod.GET, "/inscripciones").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/inscripciones/**").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/inscripciones").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/inscripciones/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/inscripciones").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/inscripciones/**").authenticated()
+
+                        // Contactos - lectura y edición protegida
+                        .requestMatchers(HttpMethod.GET, "/contactos").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/contactos/**").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/contactos").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/contactos/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/contactos").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/contactos/**").authenticated()
+
+                        // Bachilleratos - edición protegida
+                        .requestMatchers(HttpMethod.PUT, "/api/bachillerato").authenticated()
                         .requestMatchers(HttpMethod.PUT, "/api/bachillerato/**").authenticated()
+                        .requestMatchers(HttpMethod.PATCH, "/api/bachillerato").authenticated()
+                        .requestMatchers(HttpMethod.PATCH, "/api/bachillerato/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/api/bachillerato").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/api/bachillerato/**").authenticated()
 
-                        // ===============================
-                        // 🔐 PROTEGIDOS (ADMIN)
-                        // ===============================
-                        .requestMatchers("/api/noticias/**").authenticated()
-                        .requestMatchers("/usuarios/**").authenticated()
-                        .requestMatchers("/inscripciones/**").authenticated()
-                        .requestMatchers("/contactos/**").authenticated()
-
+                        // Lo demás requiere autenticación
                         .anyRequest().authenticated()
                 )
 
-                // Aquí inyectamos tu filtro personalizado antes del filtro por defecto
+                // Aquí inyectamos tu filtro personalizado ANTES del filtro de autenticación por defecto
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

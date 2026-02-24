@@ -21,5 +21,13 @@ spring:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
 
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
 server:
   port: 8080
+
+file:
+  upload-dir: uploads/noticias

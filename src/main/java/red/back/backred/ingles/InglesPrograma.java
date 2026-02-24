@@ -1,7 +1,8 @@
-package red.back.backred.inscripciones;
+package red.back.backred.ingles;
 
 import jakarta.persistence.*;
 import lombok.*;
+// import red.back.backred.inscripciones.EstadoInscripcion; // ← Elimina esta línea
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -11,36 +12,36 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Inscripcion {
+@Table(name = "ingles_inscripciones")
+public class InglesPrograma {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String nombreCompleto;
 
+    @Column(nullable = false)
     private String email;
 
     private String telefono;
 
     private String curp;
 
-    private LocalDate fechaNacimiento;
-
-    private String carrera;
-
-    // Indica el tipo de programa para filtrar en admin (ej: "bachillerato", "ingles", "carreras_ejecutivas")
-    private String programaTipo;
+    private String fechaNacimiento;
 
     @Enumerated(EnumType.STRING)
-    private EstadoInscripcion estado;
+    @Column(nullable = false)
+    private EstadoInscripcionIngl estado; // Cambiado al nuevo enum
 
     private LocalDateTime fechaRegistro;
 
     @PrePersist
     void onCreate() {
         fechaRegistro = LocalDateTime.now();
-        estado = EstadoInscripcion.EN_PROCESO;
-        if (programaTipo == null) programaTipo = "general";
+        if (estado == null) {
+            estado = EstadoInscripcionIngl.PENDIENTE; // Usa el valor del nuevo enum
+        }
     }
 }
