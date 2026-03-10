@@ -60,7 +60,9 @@ public class SecurityConfig {
                         .requestMatchers("/auth/**").permitAll()
                         .requestMatchers("/uploads/**").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                        
+
+                        // Chatbot - acceso público completo
+                        .requestMatchers("/api/chat/**").permitAll()
                         // Carreras - lectura pública
                         .requestMatchers(HttpMethod.GET, "/carreras").permitAll()
                         .requestMatchers(HttpMethod.GET, "/carreras/**").permitAll()
@@ -86,20 +88,15 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.PUT, "/ingles-inscripciones/**").authenticated()
                         .requestMatchers(HttpMethod.DELETE, "/ingles-inscripciones/**").authenticated()
 
-
-                        .requestMatchers(HttpMethod.GET, "/carreras-ejecutivas-inscripciones").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/carreras-ejecutivas-inscripciones").authenticated()
-
+                        .requestMatchers(HttpMethod.POST, "/carreras-ejecutivas-inscripciones").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/carreras-ejecutivas-inscripciones").authenticated()
+                        .requestMatchers(HttpMethod.PUT, "/carreras-ejecutivas-inscripciones/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/carreras-ejecutivas-inscripciones/**").authenticated()
 
                         .requestMatchers(HttpMethod.POST, "/bachillerato-286-inscripciones").permitAll()
                         .requestMatchers(HttpMethod.GET, "/bachillerato-286-inscripciones").authenticated()
                         .requestMatchers(HttpMethod.PUT, "/bachillerato-286-inscripciones/**").authenticated()
                         .requestMatchers(HttpMethod.DELETE, "/bachillerato-286-inscripciones/**").authenticated()
-                        
-                        .requestMatchers(HttpMethod.POST, "/carreras-ejecutivas-inscripciones").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/carreras-ejecutivas-inscripciones").authenticated()
-                        .requestMatchers(HttpMethod.PUT, "/carreras-ejecutivas-inscripciones/**").authenticated()
-                        .requestMatchers(HttpMethod.DELETE, "/carreras-ejecutivas-inscripciones/**").authenticated()
                         
                         // Contactos - creación pública, gestión protegida
                         .requestMatchers(HttpMethod.POST, "/contactos").permitAll()

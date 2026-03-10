@@ -6,3 +6,7 @@ import java.util.List;
 public interface InglesRepository extends JpaRepository<InglesPrograma, Long> {
     List<InglesPrograma> findByEstado(EstadoInscripcionIngl estado);
 }
+
+
+
+

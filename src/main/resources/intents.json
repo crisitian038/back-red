@@ -1,0 +1,37 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": ["hola", "buenos dias", "hey", "que tal"],
+      "responses": [
+        "Hola 👋 ¿En qué puedo ayudarte?",
+        "¡Bienvenido! ¿Buscas información sobre carreras o inscripciones?",
+        "Hola 😊 estoy aquí para ayudarte."
+      ]
+    },
+    {
+      "tag": "horarios",
+      "patterns": ["horarios", "a que hora", "cuando abren", "atencion"],
+      "responses": [
+        "Nuestro horario es de lunes a viernes de 9am a 6pm.",
+        "Atendemos de 9:00 AM a 6:00 PM de lunes a viernes."
+      ]
+    },
+    {
+      "tag": "carreras",
+      "patterns": ["carreras", "ofrecen", "que estudian", "programas"],
+      "responses": [
+        "Ofrecemos carreras ejecutivas, bachillerato por acuerdo 286 e inglés.",
+        "Tenemos programas de licenciatura ejecutiva e idiomas."
+      ]
+    },
+    {
+      "tag": "inscripciones",
+      "patterns": ["inscripcion", "inscribirme", "registro", "formulario"],
+      "responses": [
+        "Puedes inscribirte aquí: /inscripciones",
+        "Te dejo el enlace directo al formulario: /inscripciones"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,653 @@
+[
+  {
+    "titulo": "Saludo",
+    "intencion": "saludo",
+    "entidades": [],
+    "keywords": [
+      "hola",
+      "buenos dias",
+      "buenas tardes",
+      "buenas noches",
+      "hey",
+      "que tal",
+      "saludos",
+      "buen dia",
+      "buena tarde",
+      "buena noche"
+    ],
+    "respuesta": "¡Hola! 👋 Soy el asistente virtual de Red Educativa México. ¿Sobre qué programa te gustaría información? Puedo ayudarte con bachillerato, carreras ejecutivas, inglés, titulación por experiencia, entre otros."
+  },
+  {
+    "titulo": "Oferta Educativa General",
+    "intencion": "info_general",
+    "entidades": [],
+    "keywords": [
+      "oferta educativa",
+      "programas",
+      "que puedo estudiar",
+      "que ofrecen",
+      "estudios",
+      "educacion",
+      "carreras",
+      "cursos",
+      "programas disponibles",
+      "que programas tienen"
+    ],
+    "respuesta": "Red Educativa México ofrece:\n\n Bachillerato\n• Acuerdo 286 (8 semanas, +18 años)\n• Bachillerato 2 años (con especialidades tech)\n\n Carreras Ejecutivas (2.5 años, 100% virtual)\n• Administración, Mercadotecnia, Derecho, Contaduría\n• Ingenierías: Industrial, Software, Datos, Ciberseguridad\n\n Otros\n• Titulación por Experiencia Laboral\n• Inglés A1 (20 semanas)\n\n¿Sobre cuál programa te gustaría más información?"
+  },
+  {
+    "titulo": "Diferencia Bachilleratos",
+    "intencion": "info_general",
+    "entidades": [
+      "bachillerato"
+    ],
+    "keywords": [
+      "bachillerato",
+      "prepa",
+      "preparatoria",
+      "que bachillerato",
+      "cual bachillerato",
+      "tipos de bachillerato",
+      "bachillerato general"
+    ],
+    "respuesta": "Tenemos dos opciones:\n\n Bachillerato 286\n• 8 semanas intensivas\n• Para mayores de 18 años\n• 100% virtual o híbrido\n\n Bachillerato 2 años\n• 2 años completos\n• Para menores de 18 años\n• Especialidades tecnológicas\n\n¿Sobre cuál te gustaría más detalles?"
+  },
+  {
+    "titulo": "Información Bachillerato 286",
+    "intencion": "info_general",
+    "entidades": ["bachillerato 286", "acuerdo 286", "prepa 286"],
+    "keywords": ["bachillerato 286", "prepa 286", "preparatoria 286", "acuerdo 286", "que es bachillerato 286"],
+    "respuesta": " Bachillerato 286\n\n• Duración: 8 semanas intensivas\n• Edad: Exclusivo para mayores de 18 años\n• Modalidad: 100% virtual o híbrida\n• Horario: Sesiones en vivo lunes y martes\n• Estructura: 5 módulos integrales\n\nIdeal para obtener tu certificado de manera rápida y eficiente.\n\n¿Te gustaría saber los requisitos?"
+  },
+  {
+    "titulo": "Requisitos Bachillerato 286",
+    "intencion": "requisitos",
+    "entidades": [
+      "bachillerato 286",
+      "acuerdo 286",
+      "prepa 286"
+    ],
+    "keywords": [
+      "requisitos 286",
+      "documentos 286",
+      "inscripcion 286",
+      "necesito para 286",
+      "que necesito para 286",
+      "papeles 286"
+    ],
+    "respuesta": "Requisitos para Bachillerato 286:\n\n• Identificación oficial (INE)\n• CURP\n• Acta de nacimiento\n• Certificado de secundaria\n• Comprobante de pago\n\nProceso de inscripción:\n1. Reúne los documentos\n2. Contacta a nuestro equipo\n3. Realiza el pago correspondiente\n4. Recibe tu acceso a la plataforma"
+  },
+  {
+    "titulo": "Modalidades Bachillerato 286",
+    "intencion": "info_general",
+    "entidades": [
+      "bachillerato 286"
+    ],
+    "keywords": [
+      "modalidad 286",
+      "virtual 286",
+      "hibrida 286",
+      "como es 286",
+      "formato 286"
+    ],
+    "respuesta": "Modalidades del Bachillerato 286:\n\nOpción 100% Virtual:\n• Sesiones en vivo lunes y martes\n• Acompañamiento constante del tutor\n• Acceso 24/7 a materiales\n• Foros de discusión y apoyo\n\nOpción Híbrida:\n• Combina lo mejor de ambas modalidades\n• Sesiones presenciales opcionales\n• Flexibilidad para adaptarse a tu ritmo\n\nAmbas modalidades garantizan la misma calidad educativa y el mismo certificado oficial."
+  },
+  {
+    "titulo": "Información Bachillerato 2 años",
+    "intencion": "info_general",
+    "entidades": ["bachillerato 2 años", "prepa 2 años"],
+    "keywords": ["bachillerato 2 años", "prepa 2 años", "preparatoria 2 años", "bachillerato dos años"],
+    "respuesta": " Bachillerato en 2 años\n\n• Duración: 2 años completos\n• Edad: Para menores de 18 años (estudiantes que concluyeron secundaria)\n• Enfoque: Competencias digitales y tecnológicas\n• Especialidades: Programación, Ciberseguridad, IA, Análisis de Datos\n\nPrepara para los retos del siglo XXI combinando educación tradicional con habilidades digitales.\n\n¿Te gustaría conocer las especialidades disponibles?"
+  },
+  {
+    "titulo": "Requisitos Bachillerato 2 años",
+    "intencion": "requisitos",
+    "entidades": [
+      "bachillerato 2 años",
+      "prepa 2 años"
+    ],
+    "keywords": [
+      "requisitos bachillerato 2 años",
+      "documentos bachillerato 2 años",
+      "inscripcion bachillerato 2 años",
+      "que necesito para bachillerato 2 años"
+    ],
+    "respuesta": "Requisitos para Bachillerato en 2 años:\n\n• Acta de nacimiento\n• CURP\n• Certificado de secundaria\n• Hoja de datos de los padres/tutores\n• Identificación oficial del estudiante\n\nProceso especial para menores:\n• Entrevista con padres o tutores\n• Evaluación de madurez académica\n• Orientación vocacional incluida\n\n¿Te gustaría programar una cita para más información?"
+  },
+  {
+    "titulo": "Especialidades Bachillerato 2 años",
+    "intencion": "info_general",
+    "entidades": [
+      "bachillerato 2 años"
+    ],
+    "keywords": [
+      "especialidades bachillerato",
+      "tecnologias bachillerato",
+      "ramas bachillerato",
+      "carreras bachillerato"
+    ],
+    "respuesta": " Especialidades Tecnológicas del Bachillerato en 2 años:\n\nProgramación y Desarrollo\n• Lenguajes de programación\n• Desarrollo web y móvil\n• Bases de datos\n• Metodologías ágiles\n\nCiberseguridad\n• Protección de sistemas\n• Ética digital\n• Análisis de vulnerabilidades\n• Prevención de ciberataques\n\nInteligencia Artificial\n• Machine Learning básico\n• Algoritmos inteligentes\n• Procesamiento de datos\n• Aplicaciones prácticas\n\nAnálisis de Datos\n• Estadística aplicada\n• Visualización de datos\n• Herramientas analíticas\n• Toma de decisiones basada en datos"
+  },
+  {
+    "titulo": "Información Carreras Ejecutivas",
+    "intencion": "info_general",
+    "entidades": ["carreras ejecutivas"],
+    "keywords": ["carreras ejecutivas", "licenciaturas ejecutivas", "carreras profesionales"],
+    "respuesta": " Carreras Ejecutivas\n\n• Duración: 2 años y 6 meses\n• Edad: Para mayores de 18 años (sin límite máximo)\n• Modalidad: 100% virtual\n• Horario: Sábados 9:00-13:00 hrs (en vivo)\n• Titulación: Licenciatura oficial\n\nDiseñadas para profesionales que trabajan, combinando teoría con práctica.\n\n¿Te gustaría conocer las carreras disponibles?"
+  },
+  {
+    "titulo": "Oferta Carreras Ejecutivas Detallada",
+    "intencion": "info_general",
+    "entidades": [
+      "carreras ejecutivas"
+    ],
+    "keywords": [
+      "que carreras ejecutivas",
+      "lista carreras",
+      "carreras disponibles",
+      "licenciaturas disponibles",
+      "oferta carreras ejecutivas"
+    ],
+    "respuesta": " Nuestra oferta completa de Carreras Ejecutivas:\n\nAdministración y Negocios:\n• Administración\n• Mercadotecnia Digital\n• Contaduría Pública\n\nDerecho:\n• Derecho\n\nEducación:\n• Ciencias de la Educación\n\nIngenierías:\n• Ingeniería Industrial\n• Ingeniería en Desarrollo de Software\n• Ingeniería en Ciencias de Datos\n• Ciberseguridad\n\nTodas las carreras tienen una duración de 2 años y medio, son 100% virtuales con clases en vivo los sábados, y otorgan titulación oficial."
+  },
+  {
+    "titulo": "Modalidad Carreras Ejecutivas",
+    "intencion": "info_general",
+    "entidades": [
+      "carreras ejecutivas"
+    ],
+    "keywords": [
+      "modalidad ejecutivas",
+      "horario ejecutivas",
+      "como funcionan ejecutivas",
+      "virtual ejecutivas",
+      "clases ejecutivas"
+    ],
+    "respuesta": " Modalidad de Carreras Ejecutivas:\n\n• 100% Virtual: Todas las clases en línea\n• Horario: Sábados de 9:00 a 13:00 hrs\n• Formato: Clases en vivo por Zoom/Teams\n• Duración: 2 años y 6 meses\n• Frecuencia: Una sesión semanal de 4 horas\n\nVentajas:\n• Compatible con trabajo\n• Sin traslados\n• Flexibilidad horaria\n• Interacción en tiempo real\n• Grabaciones disponibles\n\nIdeal para profesionales que desean superarse sin dejar de trabajar."
+  },
+  {
+    "titulo": "Información Titulación por Experiencia",
+    "intencion": "info_general",
+    "entidades": ["titulacion experiencia"],
+    "keywords": ["titulacion", "experiencia laboral", "titulo por experiencia"],
+    "respuesta": " Titulación por Experiencia Laboral\n\n• Edad mínima: Generalmente 21 años o más\n• Requisito: Experiencia laboral comprobable (mínimo 3 años)\n• Beneficio: Obtén tu título profesional sin necesidad de cursar toda la carrera\n• Proceso: Evaluación teórica y práctica de tus conocimientos\n\n¿Te gustaría saber si calificas para este programa?"
+  },
+  {
+    "titulo": "Requisitos Titulación Experiencia",
+    "intencion": "requisitos",
+    "entidades": [
+      "titulacion experiencia"
+    ],
+    "keywords": [
+      "requisitos titulacion",
+      "documentos titulacion",
+      "que necesito titulacion",
+      "papeles experiencia"
+    ],
+    "respuesta": " Requisitos para Titulación por Experiencia:\n\nDocumentos básicos:\n• Acta de nacimiento\n• CURP\n• INE o identificación oficial\n• Certificado de bachillerato\n• Fotografía oficial\n\nDocumentos profesionales:\n• Curriculum Vitae actualizado\n• Portafolio de evidencias laborales\n• Cartas de recomendación\n• Constancias de empleo\n• Certificados de cursos/diplomados\n\nExperiencia requerida: Mínimo 3 años en el área profesional correspondiente."
+  },
+  {
+    "titulo": "Proceso Titulación Detallado",
+    "intencion": "info_general",
+    "entidades": [
+      "titulacion experiencia"
+    ],
+    "keywords": [
+      "proceso titulacion",
+      "como funciona titulacion",
+      "evaluacion titulacion",
+      "examen titulacion",
+      "sinodales",
+      "caso practico"
+    ],
+    "respuesta": " Proceso de Titulación por Experiencia:\n\nFase 1: Evaluación Inicial\n• Revisión de documentación\n• Análisis de experiencia laboral\n• Determinación de área de titulación\n\nFase 2: Evaluación Teórica\n• Examen de opción múltiple\n• Evaluación de conocimientos específicos\n• Duración: 2-3 horas\n\nFase 3: Evaluación Práctica\n• Resolución de caso real\n• Presentación de solución\n• Defensa de metodología\n\nFase 4: Réplica ante Sinodales\n• Presentación formal\n• Respuesta a preguntas\n• Evaluación final\n\nResultado: Título profesional oficial reconocido por la SEP."
+  },
+  {
+    "titulo": "Curso de Inglés",
+    "intencion": "info_general",
+    "entidades": ["ingles"],
+    "keywords": ["ingles", "curso de ingles", "aprender ingles", "idioma ingles"],
+    "respuesta": "🇺🇸 Curso de Inglés A1\n\n• Duración: 20 semanas\n• Edad: Abierto a todas las edades\n• Horario: Lunes a viernes (grupos matutinos y vespertinos)\n• Modalidad: Virtual con clases en vivo\n• Nivel: Inglés básico (principiante)\n• Certificación: Diploma oficial\n\nIdeal para adquirir bases sólidas del idioma inglés.\n\n¿Te gustaría conocer los horarios disponibles?"
+  },
+  {
+    "titulo": "Requisitos Inglés",
+    "intencion": "requisitos",
+    "entidades": [
+      "ingles"
+    ],
+    "keywords": [
+      "requisitos ingles",
+      "documentos ingles",
+      "inscripcion ingles",
+      "que necesito ingles"
+    ],
+    "respuesta": " Requisitos para el Curso de Inglés:\n\n• Identificación oficial (INE)\n• CURP\n• Acta de nacimiento (opcional)\n• Comprobante de pago\n\nNo se requieren conocimientos previos - El curso está diseñado para principiantes absolutos.\n\nProceso de inscripción:\n1. Contacta a nuestro equipo\n2. Realiza evaluación diagnóstica gratuita\n3. Formaliza tu inscripción\n4. Recibe acceso a la plataforma"
+  },
+  {
+    "titulo": "Horario Inglés",
+    "intencion": "horario",
+    "entidades": [
+      "ingles"
+    ],
+    "keywords": [
+      "horario ingles",
+      "cuando clases ingles",
+      "dias ingles",
+      "hora ingles"
+    ],
+    "respuesta": " Horario del Curso de Inglés A1:\n\n• Días: Lunes a viernes\n• Duración: 20 semanas consecutivas\n• Horario: Grupos matutinos y vespertinos disponibles\n• Modalidad: Clases en vivo por Zoom\n\nHorarios disponibles:\n• Matutino: 9:00 - 11:00 hrs\n• Vespertino: 18:00 - 20:00 hrs\n\nLas clases incluyen práctica oral, ejercicios interactivos y tareas para casa. Todas las sesiones se graban para quienes no puedan asistir en vivo."
+  },
+  {
+    "titulo": "Horario de Atención",
+    "intencion": "horario",
+    "entidades": [],
+    "keywords": [
+      "horario",
+      "atencion",
+      "abren",
+      "abierto",
+      "hora",
+      "dias",
+      "horario atencion",
+      "cuando atienden"
+    ],
+    "respuesta": " Horario de Atención - Red Educativa México:\n\n• Lunes a viernes: 9:00 a 18:00 hrs\n• Sábados: 9:00 a 14:00 hrs\n• Domingos: Cerrado\n\nCanales de atención:\n•  Teléfono: 800 0440 189\n•  Correo: admin@rededucativamexico.org\n• 💬 Chat en línea (este chatbot)\n\n¡Estamos aquí para ayudarte!"
+  },
+  {
+    "titulo": "Ubicación y Contacto",
+    "intencion": "ubicacion",
+    "entidades": [],
+    "keywords": [
+      "ubicacion",
+      "direccion",
+      "donde estan",
+      "mapa",
+      "oficina",
+      "sede",
+      "donde ubicados"
+    ],
+    "respuesta": " Ubicación - Red Educativa México\n\nPuedes visitarnos en:\nhttps://maps.app.goo.gl/WXN83H4VBbBF82Do9\n\nDirección completa:\nAv. Domingo Diez 1520, San Cristobal, 62230 Cuernavaca, Mor.\n\n¿Prefieres contactarnos por teléfono o correo electrónico?"
+  },
+  {
+    "titulo": "Teléfono de Contacto",
+    "intencion": "telefono",
+    "entidades": [],
+    "keywords": [
+      "telefono",
+      "numero",
+      "llamar",
+      "contacto telefonico",
+      "telefono atencion",
+      "numero telefono"
+    ],
+    "respuesta": " Teléfono de Contacto\n\n• Número principal: 800 0440 189\n• Horario: Lunes a viernes, 9:00 a 18:00 hrs\nOtros medios de contacto:\n•  Correo: admin@rededucativamexico.org\n\n¡Llámanos! Nuestro equipo está listo para atenderte."
+  },
+  {
+    "titulo": "Correo Electrónico",
+    "intencion": "correo",
+    "entidades": [],
+    "keywords": [
+      "correo",
+      "email",
+      "contacto correo",
+      "correo electronico",
+      "escribir",
+      "email contacto"
+    ],
+    "respuesta": " Correo Electrónico de Contacto\n\n• Correo principal: admin@rededucativamexico.org\n• Tiempo de respuesta: 24-48 horas hábiles\n\nOtros medios de contacto:\n•  Teléfono: 800 0440 189\n•  Oficina: Av. Domingo Diez 1520, San Cristobal, 62230 Cuernavaca, Mor.\n\nEnvíanos tu consulta y te responderemos lo antes posible. ¡Estamos para servirte!"
+  },
+  {
+    "titulo": "Costos e Información Económica",
+    "intencion": "costo",
+    "entidades": [],
+    "keywords": [
+      "costo",
+      "precio",
+      "colegiatura",
+      "pago",
+      "cuanto cuesta",
+      "cuánto cuesta",
+      "tarifas",
+      "precios"
+    ],
+    "respuesta": " Información sobre Costos\n\nPara recibir información detallada sobre costos y colegiaturas de nuestros programas:\n\n Teléfono: 800 0440 189\n Correo: admin@rededucativamexico.org\n\nFactores que influyen en el costo:\n• Programa seleccionado\n• Modalidad de estudio\n• Duración del programa\n\nNuestro equipo te proporcionará información personalizada y opciones de pago. "
+  },
+  {
+    "titulo": "Becas y Descuentos",
+    "intencion": "costo",
+    "entidades": [],
+    "keywords": [
+      "becas",
+      "descuentos",
+      "ayudas",
+      "financiamiento",
+      "pago facil",
+      "beca",
+      "descuento"
+    ],
+    "respuesta": " Becas y Descuentos Disponibles\n\nOfrecemos diferentes opciones de apoyo económico:\n\n• Descuentos por puntualidad\n• Becas por rendimiento académico\n• Descuentos familiares\n• Planes de pago accesibles\n• Financiamiento educativo\n\n¿Cómo aplicar?\nContacta a nuestro equipo de admisiones para conocer los requisitos específicos y opciones disponibles para tu caso particular.\n\n 800 0440 189\n admin@rededucativamexico.org"
+  },
+  {
+    "titulo": "Proceso de Inscripción General",
+    "intencion": "requisitos",
+    "entidades": [],
+    "keywords": [
+      "inscripcion",
+      "como inscribirme",
+      "proceso inscripcion",
+      "como matricularme",
+      "pasos inscripcion"
+    ],
+    "respuesta": " Proceso de Inscripción General\n\nPaso 1: Elige tu programa de interés\nPaso 2: Reúne los documentos requeridos\nPaso 3: Contacta a nuestro equipo de admisiones\nPaso 4: Realiza evaluación diagnóstica (si aplica)\nPaso 5: Formaliza tu inscripción y pago"
+  },
+  {
+    "titulo": "Plataforma Virtual",
+    "intencion": "info_general",
+    "entidades": [],
+    "keywords": [
+      "plataforma",
+      "virtual",
+      "online",
+      "sistema",
+      "acceso",
+      "como entro",
+      "login"
+    ],
+    "respuesta": " Nuestra Plataforma Virtual\n\n• Acceso 24/7: Disponible en cualquier momento\n• Interfaz intuitiva: Fácil de navegar\n• Recursos multimedia: Videos, presentaciones, material descargable\n• Clases en vivo: Integradas con Zoom\n• Seguimiento académico: Calificaciones y progreso en tiempo real\n\nDespués de tu inscripción, recibirás las credenciales de acceso y un tutorial completo de la plataforma."
+  },
+  {
+    "titulo": "Certificaciones y Títulos",
+    "intencion": "info_general",
+    "entidades": [],
+    "keywords": [
+      "certificacion",
+      "titulo",
+      "diploma",
+      "reconocimiento",
+      "validez",
+      "oficial",
+      "sep"
+    ],
+    "respuesta": " Certificaciones y Títulos\n\nTodos nuestros programas otorgan:\n\n• Títulos oficiales reconocidos por la SEP\n• Certificados digitales verificables\n• Diplomas físicos con sello oficial\n• Registro en el Sistema Nacional de Educación\n\nValidez nacional en toda la República Mexicana."
+  },
+  {
+    "titulo": "Apoyo y Tutorías",
+    "intencion": "info_general",
+    "entidades": [],
+    "keywords": [
+      "apoyo",
+      "tutorias",
+      "ayuda",
+      "asesoria",
+      "acompanamiento",
+      "soporte",
+      "tutores"
+    ],
+    "respuesta": " Apoyo Académico y Tutorías\n\nContamos con un completo sistema de apoyo:\n\n• Tutores especializados por materia\n• Horarios de asesoría personalizados\n• Atención individual por chat, email o teléfono\n• Material complementario adicional\n• Seguimiento continuo de tu progreso\n\nTu éxito académico es nuestra prioridad. ¡No estás solo en tu proceso de aprendizaje!"
+  },
+  {
+    "titulo": "Información de Inscripción",
+    "intencion": "inscripcion",
+    "entidades": [],
+    "keywords": [
+      "inscribirme",
+      "como inscribirme",
+      "inscripcion",
+      "inscribir",
+      "matricularme",
+      "como matricularme",
+      "proceso inscripcion",
+      "como empezar",
+      "como registrarme",
+      "quiero inscribirme",
+      "como me inscribo"
+    ],
+    "respuesta": " Proceso de Inscripción\n\nPara inscribirte en cualquiera de nuestros programas, tienes estas opciones:\n\n1.  Llámanos: 800 0440 189 (L-V 9:00-18:00 hrs)\n2.  Envíanos tu información: Completa el formulario en nuestro sitio web\n\n¡Te contactaremos para guiarte en el proceso completo!"
+  },
+
+
+    {
+      "titulo": "Proceso de Inscripción Detallado",
+      "intencion": "inscripcion",
+      "entidades": [],
+      "keywords": ["pasos inscripcion", "como inscribirse paso a paso", "proceso inscripcion detallado", "guia inscripcion", "procedimiento inscripcion", "que hacer para inscribirse"],
+      "respuesta": " Proceso de Inscripción Detallado\n\nPaso 1: Elige tu programa\nRevisa nuestra oferta educativa y decide qué programa se ajusta a tus necesidades.\n\nPaso 2: Reúne la documentación\n• Acta de nacimiento (original y copia)\n• CURP\n• Identificación oficial\n• Certificado de estudios previos\n• Comprobante de domicilio\n\nPaso 3: Contacta a admisiones\nPuedes llamarnos al 800 0440 189, enviar un correo a admin@rededucativamexico.org o escribir por WhatsApp.\n\nPaso 4: Evaluación diagnóstica\nAlgunos programas requieren una breve evaluación para conocer tu nivel.\n\nPaso 5: Formaliza tu inscripción\nRealiza el pago correspondiente y firma la documentación.\n\nPaso 6: Recibe tus accesos\nEn un plazo de 24-48 horas recibirás tus credenciales para la plataforma virtual."
+    },
+    {
+      "titulo": "Documentos para Inscripción por Programa",
+      "intencion": "requisitos",
+      "entidades": ["bachillerato 286", "bachillerato 2 años", "carreras ejecutivas", "ingles", "titulacion experiencia"],
+      "keywords": ["documentos especificos", "que documentos para cada programa", "requisitos por programa", "papeles necesarios por carrera"],
+      "respuesta": " Documentación Específica por Programa\n\nPara Bachillerato 286 y Bachillerato 2 años:\n• Acta de nacimiento\n• CURP\n• Certificado de secundaria\n• Identificación oficial (del estudiante o tutor)\n\nPara Carreras Ejecutivas:\n• Acta de nacimiento\n• CURP\n• Certificado de bachillerato\n• Identificación oficial\n• Currículum vitae (recomendado)\n\nPara Curso de Inglés:\n• Identificación oficial\n• CURP\n• No se requiere certificado previo\n\nPara Titulación por Experiencia:\n• Acta de nacimiento\n• CURP\n• Identificación oficial\n• Certificado de bachillerato\n• Constancias laborales\n• Portafolio de evidencias\n• Cartas de recomendación"
+    },
+    {
+      "titulo": "Fechas de Inicio de Cursos",
+      "intencion": "horario",
+      "entidades": ["bachillerato 286", "bachillerato 2 años", "carreras ejecutivas", "ingles"],
+      "keywords": ["fechas inicio", "cuando empiezan", "inicio cursos", "calendario", "próxima convocatoria", "fechas inscripcion"],
+      "respuesta": " Fechas de Inicio de Programas\n\nLas fechas de inicio varían según el programa y la demanda. Para obtener información actualizada y precisa, te recomendamos contactarnos directamente:\n\n Teléfono: 800 0440 189\n Correo: admin@rededucativamexico.org\n\nNuestro equipo te proporcionará las fechas exactas de la próxima convocatoria y resolverá cualquier duda."
+    },
+    {
+      "titulo": "Equivalencias y Revalidación de Estudios",
+      "intencion": "info_general",
+      "entidades": ["bachillerato 286", "bachillerato 2 años", "carreras ejecutivas"],
+      "keywords": ["equivalencias", "revalidacion", "convalidar", "homologar estudios", "reconocimiento estudios", "transferencia externa"],
+      "respuesta": " Equivalencias y Revalidación\n\nSi has estudiado previamente en otra institución, puedes solicitar la revalidación de materias o estudios parciales.\n\nRequisitos:\n• Certificado de estudios parciales o totales\n• Programas de estudio sellados por la institución de origen\n• Solicitud formal de revalidación\n\nProceso:\n1. Entregas la documentación en nuestra oficina\n2. El área académica evalúa la equivalencia\n3. Recibes un dictamen con las materias acreditadas\n4. Continúas tus estudios desde el punto correspondiente\n\nNota: La revalidación aplica para bachillerato y carreras ejecutivas, siempre que la institución de origen tenga reconocimiento oficial.\n\n¿Quieres más información sobre este proceso para tu caso específico?"
+    },
+
+    {
+      "titulo": "Problemas Técnicos con la Plataforma",
+      "intencion": "soporte",
+      "entidades": [],
+      "keywords": ["problema tecnico", "no puedo entrar", "falla plataforma", "error sistema", "no carga", "no funciona"],
+      "respuesta": "Soporte Técnico\n\nSi tienes problemas con la plataforma virtual, sigue estos pasos:\n\n1. Verifica tu conexión a internet\n2. Limpia la caché del navegador o prueba con otro navegador (Chrome, Firefox, Edge)\n4. en la página de inicio\n5. Si el error persiste, contacta a soporte técnico:\n   •  800 0440 189 (opción 2)\n   •  sistemas.redmex@gmail.com\n\n Te contactaremos lo antes posible."
+    },
+
+
+
+
+  {
+    "titulo": "Requisitos Generales",
+    "intencion": "requisitos",
+    "entidades": [],
+    "keywords": ["requisitos", "documentos", "inscripción", "necesito", "que necesito", "papeles", "tramites"],
+    "respuesta": " Requisitos Generales\n\nLos requisitos varían según el programa. En términos generales, se solicita:\n\n• Acta de nacimiento\n• CURP\n• Identificación oficial\n• Certificado de estudios previos (secundaria para bachillerato, bachillerato para carreras)\n• Comprobante de domicilio\n\nPara requisitos específicos de cada programa, por favor indícame cuál te interesa (Bachillerato 286, Bachillerato 2 años, Carreras Ejecutivas, Inglés, Titulación por Experiencia).\n\n¿Sobre qué programa te gustaría conocer los requisitos detallados?"
+  },
+  {
+    "titulo": "Requisitos por Edad",
+    "intencion": "requisitos",
+    "entidades": [],
+    "keywords": ["edad", "menor edad", "mayor edad", "años", "requisito edad", "puedo estudiar si tengo", "edad minima", "edad maxima", "limite edad", "soy menor", "soy mayor", "para adultos", "para jovenes", "para niños"],
+    "respuesta": "👥 Requisitos por Edad según el Programa\n\nEs importante que conozcas los rangos de edad para cada uno de nuestros programas:\n\n Bachillerato 286\n• Exclusivo para mayores de 18 años\n• Diseñado para adultos que buscan terminar su preparatoria de forma rápida\n\n Bachillerato 2 años\n• Para menores de 18 años (estudiantes que salen de secundaria)\n• Ideal para jóvenes que desean continuar sus estudios con especialidades tecnológicas\n\n Carreras Ejecutivas\n• Para mayores de 18 años\n• No hay límite de edad máxima\n• Perfecto para profesionales que trabajan\n\n🇺🇸 Curso de Inglés\n• Abierto a todas las edades\n• Grupos separados por niveles, no por edad\n\n Titulación por Experiencia\n• Para mayores de 21 años (generalmente)\n• Se requiere experiencia laboral comprobable\n\n¿Tienes alguna edad en específico? Puedo orientarte mejor sobre qué programa se ajusta a ti."
+  },
+
+
+
+
+
+  {
+    "titulo": "Inscripciones Abiertas",
+    "intencion": "inscripcion",
+    "entidades": [],
+    "keywords": ["inscripciones abiertas", "están abiertas las inscripciones", "ya puedo inscribirme", "cuándo abren inscripciones", "fechas de inscripción", "periodo de inscripción", "convocatoria abierta", "hay cupo", "cupo disponible"],
+    "respuesta": " Inscripciones Abiertas\n\nActualmente tenemos inscripciones abiertas para todos nuestros programas. Los periodos de inscripción son continuos, con inicios de cursos programados regularmente.\n\nProgramas con disponibilidad inmediata:\n• Bachillerato 286\n• Bachillerato 2 años\n• Carreras Ejecutivas\n• Curso de Inglés\n• Titulación por Experiencia\n\nPara conocer fechas exactas de próximo inicio, contáctanos:\n📞 800 0440 189\n📧 admin@rededucativamexico.org"
+  },
+  {
+    "titulo": "Costo de Inscripción",
+    "intencion": "costo",
+    "entidades": [],
+    "keywords": ["costo inscripción", "precio inscripción", "cuánto cuesta inscribirse", "pago de inscripción", "tarifa de inscripción", "inscripción precio", "costo para inscribirme"],
+    "respuesta": " Costo de Inscripción\n\nEl costo de inscripción varía según el programa que elijas. Tenemos diferentes montos, puedes contactarnos para conocerlos."
+  },
+  {
+    "titulo": "Inscripción en Línea",
+    "intencion": "inscripcion",
+    "entidades": [],
+    "keywords": ["inscripción en línea", "inscribirme por internet", "registro online", "inscripción virtual", "inscripción por página web", "formulario de inscripción", "inscripción digital"],
+    "respuesta": " Inscripción en Línea\n\nPuedes iniciar tu proceso de inscripción de forma totalmente digital:\n\nPasos para inscripción en línea:\n1. Contáctanos por WhatsApp o correo\n o  Completa el formulario digital y nosotros te contactaremos"
+  },
+  {
+    "titulo": "Inscripción Presencial",
+    "intencion": "ubicacion",
+    "entidades": [],
+    "keywords": ["inscripción presencial", "inscribirme en persona", "oficinas para inscribirse", "dirección para inscripción", "venir a inscribirme", "inscripción física"],
+    "respuesta": " Inscripción Presencial\n\nPuedes realizar tu inscripción directamente en nuestras oficinas:\n\nDirección:\nAv. Domingo Diez 1520, San Cristobal, 62230 Cuernavaca, Mor.\n\nHorario de atención:\n• Lunes a viernes: 9:00 a 18:00 hrs\n• Sábados: 9:00 a 14:00 hrs\n\nTe recomendamos agendar una cita previa."
+  },
+
+  {
+    "titulo": "Requisitos de Edad por Programa",
+    "intencion": "requisitos",
+    "entidades": ["bachillerato 286", "bachillerato 2 años", "carreras ejecutivas", "ingles", "titulacion experiencia"],
+    "keywords": ["edad bachillerato 286", "edad bachillerato 2 años", "edad carreras ejecutivas", "edad ingles", "edad titulacion", "requisito edad por programa"],
+    "respuesta": " Requisitos de Edad por Programa\n\nBachillerato 286:\n• Exclusivo para mayores de 18 años\n• No hay límite máximo\n\nBachillerato 2 años:\n• Para menores de 18 años (generalmente 15-17 años)\n• Estudiantes que concluyeron secundaria\n\nCarreras Ejecutivas:\n• Para mayores de 18 años\n• Sin límite máximo\n\nCurso de Inglés:\n• Abierto a todas las edades\n\nTitulación por Experiencia:\n• Mínimo 25 años (por la experiencia laboral requerida)\n• Sin límite máximo"
+  },
+
+
+
+
+
+
+
+
+
+
+{
+  "titulo": "Bachillerato General",
+  "intencion": "info_general",
+  "entidades": ["bachillerato"],
+  "keywords": ["bachillerato general", "prepa general", "preparatoria normal", "bachillerato tradicional", "estudiar prepa", "terminar prepa"],
+  "respuesta": " Bachillerato General\n\nEn Red Educativa México ofrecemos dos modalidades de bachillerato, ambas con validez oficial:\n\nBachillerato 286 (para adultos):\n• 8 semanas intensivas\n• Modalidad 100% virtual\n• Para mayores de 18 años\n• Certificado oficial SEP\n\nBachillerato 2 años (para jóvenes):\n• 2 años de duración\n• Especialidades tecnológicas\n• Para menores de 18 años\n• Enfoque en competencias digitales"
+},
+{
+"titulo": "Carreras en Administración",
+"intencion": "info_general",
+"entidades": ["carreras ejecutivas"],
+"keywords": ["administración", "administracion de empresas", "licenciatura en administracion", "carrera de administración", "estudiar administración"],
+"respuesta": " Carreras en Administración\n\nOfrecemos Licenciatura en Administración en modalidad ejecutiva:\n\nDetalles:\n• Duración: 2 años 6 meses\n• Modalidad: 100% virtual\n• Clases: Sábados 9:00-13:00 hrs\n\nPlan de estudios incluye:\n• Administración estratégica\n• Gestión de recursos humanos\n• Finanzas corporativas\n• Marketing digital\n• Emprendimiento\n• Liderazgo y negociación\n\nCampo laboral:\n• Gerente administrativo\n• Consultor empresarial\n• Director de operaciones\n• Emprendedor"
+},
+{
+"titulo": "Carreras en Mercadotecnia",
+"intencion": "info_general",
+"entidades": ["carreras ejecutivas"],
+"keywords": ["mercadotecnia", "marketing", "publicidad", "licenciatura en mercadotecnia", "carrera de marketing", "mercadotecnia digital"],
+"respuesta": " Carreras en Mercadotecnia Digital\n\nOfrecemos Licenciatura en Mercadotecnia Digital con enfoque práctico:\n\nDetalles:\n• Duración: 2 años 6 meses\n• Modalidad: 100% virtual\n• Clases: Sábados 9:00-13:00 hrs\n\nPlan de estudios incluye:\n• Marketing estratégico\n• Redes sociales y community management\n• SEO/SEM y analytics\n• Publicidad digital\n• Comportamiento del consumidor\n• E-commerce\n\nCampo laboral:\n• Director de marketing digital\n• Community manager\n• Especialista en SEM/SEO\n• Analista de métricas"
+},
+{
+"titulo": "Carreras en Derecho",
+"intencion": "info_general",
+"entidades": ["carreras ejecutivas"],
+"keywords": ["derecho", "abogado", "licenciatura en derecho", "carrera de derecho", "estudiar leyes", "ciencias jurídicas"],
+"respuesta": " Carreras en Derecho\n\nOfrecemos Licenciatura en Derecho en modalidad ejecutiva:\n\nDetalles:\n• Duración: 2 años 6 meses\n• Modalidad: 100% virtual\n• Clases: Sábados 9:00-13:00 hrs\n\nPlan de estudios incluye:\n• Derecho constitucional\n• Derecho civil y mercantil\n• Derecho penal\n• Derecho laboral\n• Juicios orales\n• Amparo\n\nCampo laboral:\n• Abogado litigante\n• Asesor jurídico empresarial\n• Consultor legal\n• Funcionario público"
+},
+{
+"titulo": "Carreras en Contaduría",
+"intencion": "info_general",
+"entidades": ["carreras ejecutivas"],
+"keywords": ["contaduría", "contaduria publica", "contador", "licenciatura en contaduría", "carrera de contabilidad", "estudiar contabilidad"],
+"respuesta": " Carreras en Contaduría \n\nOfrecemos Licenciatura en Contaduría :\n\nDetalles:\n• Duración: 2 años 6 meses\n• Modalidad: 100% virtual\n• Clases: Sábados 9:00-13:00 hrs\n\nPlan de estudios incluye:\n• Contabilidad financiera\n• Contabilidad de costos\n• Auditoría\n• Derecho fiscal\n• Finanzas corporativas\n• Ética profesional\n\nCampo laboral:\n• Contador general\n• Auditor interno/externo\n• Consultor fiscal\n• Director financiero"
+},
+{
+"titulo": "Ingeniería Industrial",
+"intencion": "info_general",
+"entidades": ["carreras ejecutivas"],
+"keywords": ["ingeniería industrial", "industrial", "ingeniero industrial", "carrera industrial", "estudiar ingeniería industrial"],
+"respuesta": " Ingeniería Industrial\n\nOfrecemos Ingeniería Industrial en modalidad ejecutiva:\n\nDetalles:\n• Duración: 2 años 6 meses\n• Modalidad: 100% virtual\n• Clases: Sábados 9:00-13:00 hrs\n\nPlan de estudios incluye:\n• Gestión de procesos\n• Logística y cadena de suministro\n• Control de calidad\n• Ergonomía y seguridad\n• Planeación estratégica\n• Optimización de recursos\n\nCampo laboral:\n• Gerente de operaciones\n• Supervisor de producción\n• Consultor en mejora continua\n• Analista de procesos"
+},
+{
+"titulo": "Ingeniería en Software",
+"intencion": "info_general",
+"entidades": ["carreras ejecutivas"],
+"keywords": ["ingeniería en software", "desarrollo de software", "programación", "ingeniero en software", "carrera de software", "estudiar programación"],
+"respuesta": " Ingeniería en Desarrollo de Software\n\nOfrecemos Ingeniería en Desarrollo de Software:\n\nDetalles:\n• Duración: 2 años 6 meses\n• Modalidad: 100% virtual\n• Clases: Sábados 9:00-13:00 hrs\n\nPlan de estudios incluye:\n• Programación (Java, Python, JavaScript)\n• Desarrollo web y móvil\n• Bases de datos\n• Metodologías ágiles\n• Arquitectura de software\n• Ciberseguridad\n\nCampo laboral:\n• Desarrollador full stack\n• Arquitecto de software\n• Líder técnico\n• Consultor TI"
+},
+{
+"titulo": "Ingeniería en Datos",
+"intencion": "info_general",
+"entidades": ["carreras ejecutivas"],
+"keywords": ["ciencia de datos", "ingeniería en datos", "data science", "big data", "analítica de datos", "estudiar datos", "ingeniero de datos"],
+"respuesta": " Ingeniería en Ciencias de Datos\n\nOfrecemos Ingeniería en Ciencias de Datos:\n\nDetalles:\n• Duración: 2 años 6 meses\n• Modalidad: 100% virtual\n• Clases: Sábados 9:00-13:00 hrs\n\nPlan de estudios incluye:\n• Estadística avanzada\n• Machine Learning\n• Python para datos\n• Visualización de datos\n• Big Data\n• Inteligencia de negocios\n\nCampo laboral:\n• Científico de datos\n• Analista de big data\n• Ingeniero de machine learning\n• Business intelligence"
+},
+{
+"titulo": "Ciberseguridad",
+"intencion": "info_general",
+"entidades": ["carreras ejecutivas"],
+"keywords": ["ciberseguridad", "seguridad informática", "hacking ético", "seguridad digital", "carrera ciberseguridad", "estudiar ciberseguridad"],
+"respuesta": " Ingeniería en Ciberseguridad\n\nOfrecemos Ingeniería en Ciberseguridad:\n\nDetalles:\n• Duración: 2 años 6 meses\n• Modalidad: 100% virtual\n• Clases: Sábados 9:00-13:00 hrs\n\nPlan de estudios incluye:\n• Seguridad en redes\n• Ethical hacking\n• Criptografía\n• Auditoría de seguridad\n• Respuesta a incidentes\n• Gobierno y cumplimiento\n\nCampo laboral:\n• Analista de seguridad\n• Ethical hacker\n• Consultor en ciberseguridad\n• Oficial de seguridad "
+},
+{
+"titulo": "Bachillerato para Adultos",
+"intencion": "info_general",
+"entidades": ["bachillerato 286"],
+"keywords": ["bachillerato para adultos", "prepa para adultos", "terminar prepa siendo adulto", "bachillerato para mayores", "prepa en 8 semanas", "bachillerato rápido adultos"],
+"respuesta": " Bachillerato para Adultos (Acuerdo 286)\n\nDiseñado especialmente para personas mayores de 18 años que desean concluir su preparatoria de forma rápida:\n\nCaracterísticas:\n• Duración: 8 semanas intensivas\n• Modalidad: 100% virtual o híbrida\n• Horario flexible (sesiones en vivo lunes y martes)\n• Validez oficial SEP\n\nVentajas:\n• Compatible con trabajo\n• Sin necesidad de asistir diario\n• Acompañamiento personalizado\n• Material descargable 24/7\n\nPerfecto para:\n• Adultos trabajadores\n• Personas que dejaron truncos sus estudios\n• Quienes necesitan el certificado rápido"
+},
+{
+"titulo": "Bachillerato Tecnológico",
+"intencion": "info_general",
+"entidades": ["bachillerato 2 años"],
+"keywords": ["bachillerato tecnológico", "prepa tecnológica", "bachillerato con especialidad", "prepa con carrera técnica", "bachillerato técnico"],
+"respuesta": " Bachillerato Tecnológico (2 años)\n\nPreparatoria con especialidades tecnológicas para jóvenes:\n\nCaracterísticas:\n• Duración: 2 años\n• Para menores de 18 años\n• Enfoque en competencias digitales\n• Certificado oficial SEP\n\nEspecialidades disponibles:\n• Programación y Desarrollo\n• Ciberseguridad\n• Inteligencia Artificial\n• Análisis de Datos\n\nVentajas:\n• Sales con carrera técnica\n• Preparación para universidad\n• Habilidades demandadas\n• Proyectos prácticos"
+},
+
+
+
+
+  {
+    "titulo": "Reportar Problema Técnico",
+    "intencion": "soporte",
+    "entidades": [],
+    "keywords": ["reportar problema", "bug", "error en plataforma", "fallo sistema", "algo no funciona", "queja técnica", "reporte de error"],
+    "respuesta": " Reportar Problema Técnico\n\nPara reportar fallas técnicas, proporciona la siguiente información:\n\nDatos necesarios:\n• Nombre completo\n• Correo registrado\n• Programa que estudias\n• Descripción detallada del problema\n• Captura de pantalla (si aplica)\n• Qué navegador usas (Chrome, Firefox, etc.)\n• Qué dispositivo (computadora, teléfono, tablet)\n\nCanales de reporte:\n📧 sistemas.redmex@gmail.com\n📞 800 0440 189 (opción 2)\n\nTiempo de respuesta:\n 24-48 hrs hábiles"
+  },
+
+
+
+
+
+  {
+    "titulo": "Validez Oficial SEP",
+    "intencion": "info_general",
+    "entidades": [],
+    "keywords": ["validez oficial", "reconocimiento sep", "titulo oficial", "sep", "secretaría educación", "rvoe", "acuerdo sep"],
+    "respuesta": " Validez Oficial SEP\n\nTodos nuestros programas cuentan con Reconocimiento de Validez Oficial de Estudios otorgado por la Secretaría de Educación Pública.\n\nEsto significa:\n• Tus estudios son válidos en todo México"
+  },
+  {
+    "titulo": "Duración de Programas",
+    "intencion": "info_general",
+    "entidades": [],
+    "keywords": ["duración programas", "cuánto dura", "tiempo de estudio", "años de carrera", "cuántos años", "periodo escolar"],
+    "respuesta": " Duración de Programas\n\nBachillerato:\n• Acuerdo 286: 8 semanas intensivas\n• Bachillerato 2 años: 2 años (6 semestres)\n\nCarreras Ejecutivas:\n• Todas las licenciaturas e ingenierías: 2 años 6 meses (9 cuatrimestres)\n\nCursos:\n• Inglés A1: 20 semanas (5 meses)\n• Cursos cortos: 4-8 semanas según el tema\n\nTitulación:\n• Proceso completo: 2-3 meses aproximadamente\n\n¿Sobre qué programa específico quieres conocer la duración?"
+  },
+
+  {
+    "titulo": "Perfil de Ingreso",
+    "intencion": "requisitos",
+    "entidades": [],
+    "keywords": ["perfil de ingreso", "que necesito saber", "conocimientos previos", "preparación necesaria", "nivel requerido", "puedo entrar si"],
+    "respuesta": " Perfil de Ingreso por Programa\n\nBachillerato 286:\n• Secundaria concluida\n• Mayores de 18 años\n• Ganas de terminar prepa rápido\n• No requiere conocimientos previos específicos\n\nBachillerato 2 años:\n• Secundaria concluida\n• Menores de 18 años\n• Interés por tecnología\n• Evaluación diagnóstica de nivelación\n\nCarreras Ejecutivas:\n• Bachillerato concluido\n• Mayores de 18 años\n• Experiencia laboral (deseable)\n• Interés en el área seleccionada\n\nInglés:\n• No requiere conocimientos previos\n• Todas las edades\n• Evaluación diagnóstica gratuita\n\nTitulación:\n• Bachillerato concluido\n• 3+ años experiencia laboral\n• Documentación comprobable"
+  },
+  {
+    "titulo": "Perfil de Egreso",
+    "intencion": "info_general",
+    "entidades": [],
+    "keywords": ["perfil de egreso", "que aprendo", "que voy a saber", "habilidades adquiridas", "qué sé al terminar", "competencias"],
+    "respuesta": " Perfil de Egreso por Programa\n\nBachillerato 286 y 2 años:\n• Competencias comunicativas\n• Pensamiento crítico y matemático\n• Habilidades digitales básicas\n• Preparación para educación superior\n\nCarreras Ejecutivas (generales):\n• Capacidad de análisis y solución de problemas\n• Toma de decisiones basada en datos\n• Liderazgo y trabajo en equipo\n• Comunicación efectiva\n• Ética profesional\n• Adaptación al cambio\n\nEspecífico por carrera:\n• Administración: Gestión de recursos\n• Mercadotecnia: Estrategias digitales\n• Derecho: Argumentación jurídica\n• Contaduría: Análisis financiero\n• Ingenierías: Soluciones tecnológicas"
+  },
+  {
+    "titulo": "Titulación y Cédula",
+    "intencion": "info_general",
+    "entidades": [],
+    "keywords": ["cédula profesional", "titulo profesional", "cómo me titulo", "proceso de titulación", "obtener título", "registro de título"],
+    "respuesta": " Titulación y Cédula Profesional\n\nAl concluir tus estudios, te guiamos en todo el proceso:\n\nProceso de titulación:\n1. Concluir todas las materias del plan\n2. Elegir modalidad de titulación (tesis, examen, experiencia)\n3. Realizar el proceso seleccionado\n4. Obtener tu título profesional\n5. Tramitar cédula profesional ante la SEP\n\nTiempos estimados:\n• Título: 2-3 meses después de egresar\n• Cédula: 3-6 meses después del trámite\n\nCostos:\n• Derechos de titulación: incluidos en tu colegiatura\n• Trámite de cédula: costo federal (aprox. $1,500 MXN)\n\n¿Tienes dudas sobre alguna modalidad de titulación?"
+  },
+  {
+    "titulo": "Trámites Administrativos",
+    "intencion": "info_general",
+    "entidades": [],
+    "keywords": ["trámites", "kardex", "constancia estudios", "certificado parcial", "boleta", "historial académico", "documentos escolares"],
+    "respuesta": " Trámites Administrativos\n\nPuedes solicitar diversos documentos escolares:\n\nDocumentos disponibles:\n• Constancia de estudios\n• Kardex (historial académico)\n• Boleta de calificaciones\n• Certificado parcial\n• Carta de buena conducta\n• Credencial escolar\n\nCómo solicitarlos:\n1. Envía correo a admin@rededucativamexico.org\n2. Especifica el documento que necesitas\n3. Adjunta identificación oficial\n4. Realiza el pago de derechos (si aplica)\n5. Recibe documento en 5-7 días hábiles\n\nCostos:\n• Constancias: sin costo (primera)\n• Kardex: $150 MXN\n• Certificado parcial: $300 MXN\n• Reposición de credencial: $200 MXN\n\n¿Qué trámite necesitas realizar?"
+  }
+
+
+
+]

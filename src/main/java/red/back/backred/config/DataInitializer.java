@@ -268,7 +268,7 @@ public class DataInitializer implements CommandLineRunner {
         ejecutiva1.setEmail("felipe.hernandez@email.com");
         ejecutiva1.setTelefono("5557777777");
         ejecutiva1.setCurp("HEGF000707HDFDDDD00");
-        ejecutiva1.setFechaNacimiento("1990-07-30");
+        ejecutiva1.setFechaNacimiento(LocalDate.parse("1990-07-30"));
         ejecutiva1.setEstado(EstadoInscripcion.EN_PROCESO);
         ejecutiva1.setFechaRegistro(LocalDateTime.now());
 
@@ -277,7 +277,7 @@ public class DataInitializer implements CommandLineRunner {
         ejecutiva2.setEmail("gabriela.moreno@email.com");
         ejecutiva2.setTelefono("5558888888");
         ejecutiva2.setCurp("MODG000808HDFEEEE00");
-        ejecutiva2.setFechaNacimiento("1988-08-14");
+        ejecutiva2.setFechaNacimiento(LocalDate.parse("1988-08-14"));
         ejecutiva2.setEstado(EstadoInscripcion.INSCRITO);
         ejecutiva2.setFechaRegistro(LocalDateTime.now());
 

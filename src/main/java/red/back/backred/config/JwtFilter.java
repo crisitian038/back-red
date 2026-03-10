@@ -40,7 +40,8 @@ public class JwtFilter extends OncePerRequestFilter {
                 (path.startsWith("/ingles-inscripciones") && "POST".equals(request.getMethod())) ||
                 (path.startsWith("/bachillerato-286-inscripciones") && "POST".equals(request.getMethod())) ||
                 (path.startsWith("/carreras-ejecutivas-inscripciones") && "POST".equals(request.getMethod())) ||
-                path.startsWith("/contactos") && "POST".equals(request.getMethod())) {
+                (path.startsWith("/contactos") && "POST".equals(request.getMethod())) ||
+                (path.startsWith("/inscripciones") && "POST".equals(request.getMethod()))) {
             filterChain.doFilter(request, response);
             return;
         }
@@ -49,6 +50,9 @@ public class JwtFilter extends OncePerRequestFilter {
 
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String token = authHeader.substring(7);
+            System.out.println("Token recibido: " + token);
+            System.out.println("¿Token válido?: " + jwtUtil.isTokenValid(token));
+
 
             try {
                 if (jwtUtil.isTokenValid(token)) {

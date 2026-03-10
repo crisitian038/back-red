@@ -78,43 +78,25 @@ public class NoticiaController {
     }
 
     // ================== ACTUALIZAR CON ARCHIVO O URL (REQUIERE AUTENTICACIÓN) ==================
-    @PutMapping(value = "/{id}", consumes = {"multipart/form-data", "application/json"})
+    // ================== ACTUALIZAR (REQUIERE AUTENTICACIÓN) ==================
+    @PutMapping("/{id}")
     public Noticia actualizar(
             @PathVariable Long id,
-            @RequestParam String titulo,
-            @RequestParam(required = false) String descripcionCorta,
-            @RequestParam(required = false) String introduccion,
-            @RequestParam(required = false) String contenido,
-            @RequestParam(required = false) String imagenUrl,
-            @RequestParam(required = false) MultipartFile imagenFile,
-            @RequestParam(defaultValue = "true") Boolean publicada) throws IOException {
-        
+            @RequestBody Noticia noticiaActualizada
+    ) throws IOException {
+
         Noticia noticiaExistente = noticiaService.obtenerPorId(id);
+
         if (noticiaExistente == null) {
             throw new IllegalArgumentException("Noticia no encontrada con ID: " + id);
         }
 
-        noticiaExistente.setTitulo(titulo);
-        noticiaExistente.setDescripcionCorta(descripcionCorta);
-        noticiaExistente.setIntroduccion(introduccion);
-        noticiaExistente.setContenido(contenido);
-        noticiaExistente.setPublicada(publicada);
-
-        // Procesar imagen: si hay nuevo archivo, eliminar el viejo y guardar el nuevo
-        if (imagenFile != null && !imagenFile.isEmpty()) {
-            // Eliminar imagen anterior si es una ruta local
-            if (noticiaExistente.getImagen() != null && !noticiaExistente.getImagen().startsWith("http")) {
-                fileStorageService.eliminarImagen(noticiaExistente.getImagen());
-            }
-            String rutaImagen = fileStorageService.guardarImagen(imagenFile);
-            noticiaExistente.setImagen(rutaImagen);
-        } else if (imagenUrl != null && !imagenUrl.isEmpty()) {
-            // Eliminar imagen anterior si es una ruta local
-            if (noticiaExistente.getImagen() != null && !noticiaExistente.getImagen().startsWith("http")) {
-                fileStorageService.eliminarImagen(noticiaExistente.getImagen());
-            }
-            noticiaExistente.setImagen(imagenUrl);
-        }
+        noticiaExistente.setTitulo(noticiaActualizada.getTitulo());
+        noticiaExistente.setDescripcionCorta(noticiaActualizada.getDescripcionCorta());
+        noticiaExistente.setIntroduccion(noticiaActualizada.getIntroduccion());
+        noticiaExistente.setContenido(noticiaActualizada.getContenido());
+        noticiaExistente.setPublicada(noticiaActualizada.getPublicada());
+        noticiaExistente.setImagen(noticiaActualizada.getImagen());
 
         return noticiaService.guardar(noticiaExistente);
     }
